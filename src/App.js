@@ -1,24 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Header from './Header';
+
 
 function App() {
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    work: '',
+    school: ''
+  });
+
+  function handleChange(event){
+    const {value, name} = event.target;
+    setContact((prevValue) => {
+     return{
+      ...prevValue,
+      [name]: value
+     }
+    })
+
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+        <Header />
+      <div className='cv'>
+        <h2> Name: {contact.name} </h2>
+        <h2> Email: {contact.email} </h2>
+        <h2> Phone: {contact.phone} </h2>
+        <h2> Work: {contact.work}</h2>
+        <h2> School: {contact.school}</h2>
+        </div>
+
+        <form action="" className="App">
+         
+          <input 
+          type="text" 
+          name="name" 
+          value={contact.name}
+          onChange={handleChange} 
+          placeholder='Name' />
+
+          <input 
+          type="text" 
+          name="email" 
+          value={contact.email} 
+          onChange={handleChange} 
+          placeholder='email'/>
+
+          <input 
+          type="text" 
+          name="phone" 
+          value={contact.phone}
+          onChange={handleChange}
+          placeholder='phone' />
+
+          <input 
+          type="text" 
+          name="work"
+          value={contact.work}
+          onChange={handleChange} 
+          placeholder='work' />
+
+          <input 
+          type="text" 
+          name="school" 
+          value={contact.school}
+          onChange={handleChange}
+          placeholder='school' />
+
+        </form>
+
     </div>
+
   );
 }
 
