@@ -5,7 +5,7 @@ body{
 
 .App{
     position: absolute;
-    height: 240px;
+    height: 280px;
     width: 220px;
     display: flexbox;
     margin-top: 200px;
@@ -36,4 +36,9 @@ body{
     top: 0;
     left: 0;
     margin-bottom: 30px;
+}
+
+.words{
+    height: 40px;
+    width: 200px;
 }

@@ -38,6 +38,7 @@ function App() {
         <form action="" className="App">
          
           <input 
+          className='words'
           type="text" 
           name="name" 
           value={contact.name}
@@ -45,6 +46,7 @@ function App() {
           placeholder='Name' />
 
           <input 
+          className='words'
           type="text" 
           name="email" 
           value={contact.email} 
@@ -52,6 +54,7 @@ function App() {
           placeholder='email'/>
 
           <input 
+          className='words'
           type="text" 
           name="phone" 
           value={contact.phone}
@@ -59,6 +62,7 @@ function App() {
           placeholder='phone' />
 
           <input 
+          className='words'
           type="text" 
           name="work"
           value={contact.work}
@@ -66,6 +70,7 @@ function App() {
           placeholder='work' />
 
           <input 
+          className='words'
           type="text" 
           name="school" 
           value={contact.school}
