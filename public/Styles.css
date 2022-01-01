@@ -5,21 +5,25 @@ body{
 
 .App{
     position: absolute;
-    height: 200px;
-    width: 200px;
-    float: left;
-    display: block;
+    height: 240px;
+    width: 220px;
+    display: flexbox;
     margin-top: 200px;
+    margin-left: 10px;
+    border: solid;
+    font-size: 40px;
+  
 }
 
 .cv{
     position: aboslute;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 800px;
     float: right;
-    margin-right: 50%;
-    display: block;
+    display: flexbox;
     margin-top: 200px;
+    margin-right: 30%;
+    border: solid;
 
 }
 
